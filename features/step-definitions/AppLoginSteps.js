@@ -8,11 +8,11 @@ const checkoutPage = require('../pageobjects/AppCheckout.js');
 //navigating to login page
 
 Given(/^Navigate to the Login Page$/, async () => {
-    await browser.pause(3000)
+    
     await landingPage.hamburger();
-    await browser.pause(3000)
+
     await landingPage.logins();
-    await browser.pause(3000)
+    
 });
 
 
