@@ -22,17 +22,14 @@ class LandingPage {
 
     async hamburger(){
         await this.waitForHamburgerMenu();
-        this.hamburgerClick.click( {force: true} )  
-        await browser.pause(3000)  
+        this.hamburgerClick.click( {force: true} )   
     }
 
 //Clicking on Login module
 
     async logins(){
-        //await $('~menu item log in').waitForExist({timeout: 20000});
         await this.waitForLoginItem();
         this.LoginClick.click({ force: true })
-        await browser.pause(3000) 
     }
 }
 

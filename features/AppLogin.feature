@@ -4,7 +4,6 @@ Feature: Login Functionality
 
     Given Navigate to the Login Page 
     When I login with <username> and <password>
-    And Click on the login button
     Then Validatation message should be <message>
 
     Examples:

@@ -12,28 +12,18 @@ class LoginPage {
   }
 
   async waitForLogin() {
-    await this.passwordInput.waitForDisplayed({ timeout: 10000 });
+    await this.loginButton.waitForDisplayed({ timeout: 10000 });
 }
 
     //Entering username and password
 
     async input(username, password) {
       await this.waitForUsername()
-      this.usernameInput.setValue(username);
-      await browser.pause(3000) 
+      await this.usernameInput.setValue(username); 
       await this.waitForPassword()
-      this.passwordInput.setValue(password);
-      await browser.pause(3000) 
+      await this.passwordInput.setValue(password);
+      await this.loginButton.click(); 
    }
-
-    //Clicking on login button
-
-    async loginbuttonClick(){
-        await this.waitForLogin()
-        await browser.pause(3000) 
-        this.loginButton.click();
-        await browser.pause(3000) 
-    }
   
   }
   
